@@ -5,9 +5,9 @@ const viewPergunta = (_req, resp) => {
 };
 
 const createQuestion = async (req, resp) => {
-  const { titulo, descricao } = req.body;
-  const response = await createQuestionBank(titulo, descricao);
-  if (response) return resp.status(201).redirect('/');
+  const { title, description } = req.body;
+  const response = await createQuestionBank(title, description);
+  if (response) return resp.render('../src/views/formPergunta', {});
 };
 
 module.exports = {

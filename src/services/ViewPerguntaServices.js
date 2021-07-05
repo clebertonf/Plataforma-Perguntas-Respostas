@@ -1,8 +1,8 @@
-const { Pergunta } = require('../models/index');
+const { Perguntas } = require('../models/index');
 
-const createQuestion = async (titulo, descricao) => {
+const createQuestion = async (title, description) => {
   try {
-    const response = await Pergunta.create({ titulo, descricao });
+    const response = await Perguntas.create({ title, description });
     if (response) return true;
   } catch (error) {
     console.log(error);
