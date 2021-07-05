@@ -3,13 +3,11 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 
+app.use(require('./src/routers/index'));
+
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
-
-app.get('/', (_req, resp) => {
-  resp.status(200).render('../src/views/index', {});
-});
 
 app.get('/pergunta', (_req, resp) => {
   resp.status(200).render('../src/views/formPergunta.ejs');
