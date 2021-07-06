@@ -5,3 +5,8 @@ body{
 #card-formulario{
     margin-top: 5vh;
 }
+
+.button-a {
+    display: flex;
+    flex: 1 1 50%;
+}
