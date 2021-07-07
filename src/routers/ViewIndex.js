@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { viewContoller } = require('../controllers/ViewIndexController');
+const { listQuestions } = require('../controllers/ViewPerguntaController');
 
-router.get('/', viewContoller);
+router.get('/', listQuestions);
 
 module.exports = router;
