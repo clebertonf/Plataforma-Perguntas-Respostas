@@ -3,6 +3,8 @@ const {
   listQuestions: listQuestionsBank, findQuestionById: findQuestionBankId,
 } = require('../services/ViewPerguntaServices');
 
+const { listAnswers } = require('../services/ViewRespostaService');
+
 const listQuestions = async (_req, resp) => {
   const response = await listQuestionsBank();
   resp.status(200).render('../src/views/index', { response });
@@ -21,9 +23,11 @@ const createQuestion = async (req, resp) => {
 
 const findQuestionById = async (req, resp) => {
   const { id } = req.params;
+  const answers = await listAnswers(id);
+
   const response = await findQuestionBankId(id);
   if (!response) return resp.redirect('/');
-  resp.status(200).render('../src/views/resposta', { response });
+  resp.status(200).render('../src/views/resposta', { response, answers });
 };
 
 module.exports = {

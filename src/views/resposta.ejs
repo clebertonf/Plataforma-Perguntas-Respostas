@@ -20,11 +20,16 @@
             <textarea
              placeholder="Digite Sua Resposta"
              class="form-control"
-             name="answer"></textarea>
+             name="answer"
+             required=true
+             ></textarea>
              <br>
              <input type="hidden" name="questionId" value="<%= response.id %> ">
            <button type="submit" class="btn btn-outline-primary">Responder</button>
         </form>
+        <% answers.forEach(value => { %>
+             <h3><%= value.answers %> </h3>
+        <% }) %>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

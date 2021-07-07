@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { createAnswer } = require('../controllers/ViewRespostaController');
 
-router.get('/', createAnswer);
+router.post('/', createAnswer);
 
 module.exports = router;
