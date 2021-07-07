@@ -22,7 +22,8 @@ const createQuestion = async (req, resp) => {
 const findQuestionById = async (req, resp) => {
   const { id } = req.params;
   const response = await findQuestionBankId(id);
-  console.log(response);
+  if (!response) return resp.redirect('/');
+  resp.status(200).render('../src/views/resposta', { response });
 };
 
 module.exports = {

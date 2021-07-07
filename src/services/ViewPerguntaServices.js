@@ -23,9 +23,9 @@ const createQuestion = async (title, description) => {
   }
 };
 
-const findQuestionById = async () => {
+const findQuestionById = async (id) => {
   try {
-    const response = await Perguntas.findByPk(57);
+    const response = await Perguntas.findByPk(id);
     return response;
   } catch (error) {
     console.log(error);
