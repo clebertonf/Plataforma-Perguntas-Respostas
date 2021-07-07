@@ -1,11 +1,10 @@
 const router = require('express').Router();
 const {
-  viewPergunta, createQuestion, listQuestions, findQuestionById,
+  viewPergunta, createQuestion, findQuestionById,
 } = require('../controllers/ViewPerguntaController');
 
-router.get('/', listQuestions);
-router.get('/pergunta', viewPergunta);
-router.post('/pergunta', createQuestion);
-router.get('/pergunta/:id', findQuestionById);
+router.get('/', viewPergunta);
+router.post('/', createQuestion);
+router.get('/:id', findQuestionById);
 
 module.exports = router;
