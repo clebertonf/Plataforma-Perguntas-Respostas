@@ -1,4 +1,7 @@
-const { createQuestion: createQuestionBank, listQuestions: listQuestionsBank } = require('../services/ViewPerguntaServices');
+const {
+  createQuestion: createQuestionBank,
+  listQuestions: listQuestionsBank, findQuestionById: findQuestionBankId,
+} = require('../services/ViewPerguntaServices');
 
 const listQuestions = async (_req, resp) => {
   const response = await listQuestionsBank();
@@ -16,8 +19,15 @@ const createQuestion = async (req, resp) => {
   if (response) resp.redirect('/');
 };
 
+const findQuestionById = async (req, resp) => {
+  const { id } = req.params;
+  const response = await findQuestionBankId(id);
+  console.log(response);
+};
+
 module.exports = {
   viewPergunta,
   createQuestion,
   listQuestions,
+  findQuestionById,
 };
