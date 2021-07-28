@@ -72,3 +72,6 @@ Verifique o package.json, la se encontram scripts para execução do projeto.
 
 ## Funcionalidades principais
 
+Abaixo estou ilustrando a pagina inicial da aplicação:
+
+![pagina inicial](./public/imgs/03-pagina-inicial.png)
