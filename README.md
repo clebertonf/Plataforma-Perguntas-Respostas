@@ -14,12 +14,15 @@ ORM -Object Relational Mapper. Neste projeto utilizei o Sequelize.
 
 `MVC` - MODEL, VIEWS e CONTROLLERS
 
-1. MODEL: É responsável por toda interface com banco de dados, query's, conexão etc. e também responsável pelas regras de negócio.
-2.  VIEWS: Se encontram todos os arquivos .HTML que renderizam as paginas e interface gráfica do sistema.
+1. MODEL: É responsável por toda interface com banco de dados, query's, conexão etc. No caso deste projeto 
+sequelize e o responsável.
+2. VIEWS: Se encontram todos os arquivos .HTML que renderizam as paginas e interface gráfica do sistema.
 neste caso os arquivos são .ejs view engine utilizada.
 3. CONTROLLERS: É responsável em ligar o model com as views, fazendo o meio de campo da arquitetura.
 4. PUBLIC: Contém as imagens utilizadas no projeto, arquivos estáticos CSS e javaSript.
 5. ROUTERS:  Possui as rotas da aplicação, sistema de rotas próprio do framework Express.
+6. CONFIG: Possui as configurações de conexão do sequelize.
+7. MIGRATIONS / SEEDERS: Pastas do sequelize, para a estrutura do banco de dados.
 
 ## tecnologias utilizadas
 
@@ -49,7 +52,18 @@ para rodar localmente.
 
 - As demais dependêcias são instaladas com o comando npm install.
 
+- Crie um arquivo .env na raiz da pasta SRC com as seguintes variáveis de ambiente:
+  - MYSQL_PASSWORD= 'Sua senha do mysql se houver'
+  - MYSQL_USER= 'User mysql normalmente ROOT'
+  - HOSTNAME=localhost
+
+![arquivo .env](./public/imgs/02-arquivo-env.png)
 ## Executando
+
+1. Dentro da pasta src rode o seguinte comando no terminal `npx sequelize db:create`
+este comando serve para criar o banco de dados com Sequelize.
+2. Em seguida rode o comando  `npx sequelize db:migrate` para criação das tabelas.
+3. Por fim rode o comando  `npx sequelize db:seed:all` para popular o banco de Dados.
 
 Verifique o package.json, la se encontram scripts para execução do projeto.
 
