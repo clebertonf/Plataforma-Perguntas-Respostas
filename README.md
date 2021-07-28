@@ -72,6 +72,10 @@ Verifique o package.json, la se encontram scripts para execução do projeto.
 
 ## Funcionalidades principais
 
-Abaixo estou ilustrando a pagina inicial da aplicação:
+Abaixo estou ilustrando a página inicial da aplicação:
 
 ![pagina inicial](./public/imgs/03-pagina-inicial.png)
+
+Em seguida demostro o fluxo completo da aplicação, cadastrando uma pergunta e respondendo.
+
+![fluxo-completo](./public/imgs/04-perguntas-respostas.gif)
