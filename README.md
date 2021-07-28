@@ -63,7 +63,6 @@ para rodar localmente.
 1. Dentro da pasta src rode o seguinte comando no terminal `npx sequelize db:create`
 este comando serve para criar o banco de dados com Sequelize.
 2. Em seguida rode o comando  `npx sequelize db:migrate` para criação das tabelas.
-3. Por fim rode o comando  `npx sequelize db:seed:all` para popular o banco de Dados.
 
 Verifique o package.json, la se encontram scripts para execução do projeto.
 
